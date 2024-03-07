@@ -1,7 +1,9 @@
 ﻿<Router AppAssembly="@typeof(App).Assembly">
     <Found Context="routeData">
-        <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
-        <FocusOnNavigate RouteData="@routeData" Selector="h1" />
+        <XTabsRouteView CloseTabs="true" NewTabSetActive="true" 
+        NavigationMode="BlazorXTabs.Configuration.NavigationMode.Navigable"
+        RenderMode="BlazorXTabs.Configuration.RenderMode.Full" 
+        RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
     </Found>
     <NotFound>
         <PageTitle>Not found</PageTitle>
